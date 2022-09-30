@@ -1,1 +1,3 @@
 # leetcode-c
+
+init
