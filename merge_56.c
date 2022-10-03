@@ -43,12 +43,18 @@ int *b= (int*)malloc(count * sizeof(int));//一维数组长度为count
 
 
 二维数组的创建
+为什么不能使用int[][]的形式？
+个人理解int[][]所创建的数据全部放在栈区，所以当函数调用时便会读不到
+
+
+
 int** pRes = (int**)malloc(len * sizeof(int*));
 for (int i = 0; i < len; i++)
 {
     pRes[i] = (int*)malloc(2 * sizeof(int)); // 为每个结点分配一个数组空间，元素个数为列数
 } 
 假设需要创建n行*m列的二维数组
+
 首先先创建n行，采用二级指针的形式
 int** pRes = (int**)malloc(len * sizeof(int*));
 此时二维指针每加一都会是一行
