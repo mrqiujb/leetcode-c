@@ -70,8 +70,80 @@ memcpy(目的地址,原地址,2*sizeof(int));//2个int
 
 
 #include "common.c"
+int cmp(const void* _a, const void* _b)
+{
+    int *left= *(int **)_a;
+    int *right=*(int **)_b;
+    if(left[0]>right[0]) return 1;
+    else if(left[0]==right[0])
+    {
+        if(left[1]>right[1]) return 1;
+        else return 0;
+    }
+    else return 0;
+
+}
+//快排对二维数组进行排序
+void quick_sort(int ** intervals,int low,int high)
+{
+    if(low==high || high<low) return;
+    //找到枢轴元素
+    //先认为最小的位置的元素为枢轴元素
+    int * pre=(int *)malloc(sizeof(int)*2);
+    memcpy(pre,intervals[low],sizeof(int)*2);
+    int i=low+1;
+    int j=high;
+    //根据枢轴元素将数据二分
+    while(i-j!=1)
+    {
+        if(intervals[i][0]<pre[0])
+        {
+            i++;
+            continue;
+        }
+        else if(intervals[i][0]==pre[0] && intervals[i][1]<=pre[1])
+        {
+            i++;
+            continue;
+        }
+        if(intervals[j][0]>pre[0])
+        {
+            j--;
+            continue;
+        }
+        else if(intervals[j][0]==pre[0] && intervals[j][1]>=pre[1])
+        {
+            j--;
+            continue;
+        }
+        // i j交换
+        int tem1=intervals[i][0];
+        int tem2=intervals[i][1];
+        intervals[i][0]=intervals[j][0];
+        intervals[i][1]=intervals[j][1];
+        intervals[j][0]=tem1;
+        intervals[j][1]=tem2;
+    }
+    free(pre);
+    //交换pre和j
+    int tem1=intervals[j][0];
+    int tem2=intervals[j][1];
+    intervals[j][0]=intervals[low][0];
+    intervals[j][1]=intervals[low][1];
+    intervals[low][0]=tem1;
+    intervals[low][1]=tem2;
+    //递归排序左侧数据
+    quick_sort(intervals,low,j-1);
+    //递归排序右侧数据
+    quick_sort(intervals,j+1,high);
+}
+
 int** merge(int** intervals, int intervalsSize, int* intervalsColSize,
                                          int* returnSize, int** returnColumnSizes){    
+    if(intervalsSize==0) return NULL;
+    //排序
+    //quick_sort(intervals,0,intervalsSize-1);
+    qsort(intervals,intervalsSize,2*sizeof(int),cmp);
     bool *flags=(bool *)malloc(sizeof(bool)*intervalsSize);
     for(size_t i=0;i<intervalsSize;i++)
     {
@@ -86,11 +158,12 @@ int** merge(int** intervals, int intervalsSize, int* intervalsColSize,
             flags[i]=1;
             count++;
         }
-        //[2,4] [3,9]
-        else if(intervals[i][1]>intervals[i+1][0])
+        else if(intervals[i][1]>=intervals[i+1][0])
         {
             flags[i]=1;
             intervals[i+1][0]=intervals[i][0];
+            if(intervals[i][1]>intervals[i+1][1])
+            intervals[i+1][1]=intervals[i][1];
             count++;
         }
     }
