@@ -4,10 +4,11 @@
 #include <limits.h>
 #include <stdbool.h>
 #include <stdlib.h>
-
+#include "threeSome.c"
 int main()
 {
-    char *str=NULL;
-    str= intToRoman(58);
-    printf("%s",str);
+    int nums[]={-1,0,1,2,-1,-4};
+    int **a=malloc(sizeof(int **));
+    int *returnsize=(int *)malloc(sizeof(int));
+    threeSum(nums,6,returnsize,a);
 }
