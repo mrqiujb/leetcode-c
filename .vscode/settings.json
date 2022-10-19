@@ -10,6 +10,11 @@
         "unordered_map": "c",
         "algorithm": "c",
         "ratio": "c",
-        "searchInsert.C": "cpp"
+        "searchInsert.C": "cpp",
+        "vector": "cpp",
+        "iosfwd": "cpp",
+        "iterator": "cpp",
+        "stack": "cpp",
+        "__config": "cpp"
     }
 }
