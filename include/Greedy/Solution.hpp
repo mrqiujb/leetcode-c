@@ -3,7 +3,8 @@
 #ifndef SOLUTION_H
 #define SOLUTION_H
 
-
+#include <utility>
+#include <set>
 #include <vector>
 #include <string>
 #include <algorithm>
@@ -23,11 +24,13 @@ struct TreeNode {
 
 class Solution {
     public:
+    set<pair<int,int>> tried;
     vector<int> inorderRes;
     bool isMatch(string s, string p);
     vector<int> inorderTraversalRecursion(TreeNode* root);
     int visit_inorder(TreeNode *root);
     vector<int> inorderTraversal(TreeNode* root);
+    bool regex(string s,string p,int poss,int posp);
 };
 
 

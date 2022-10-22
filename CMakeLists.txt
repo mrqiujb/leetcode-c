@@ -1,4 +1,5 @@
 cmake_minimum_required (VERSION 2.8.12)#规定cmake的最低版本要求
+set(CMAKE_CXX_STANDARD 11)#c++版本
 project(LEETCODE_C)#项目的名称，不一定和你的文件夹名称一样
 set(CMAKE_CXX_COMPILER "clang++")#设置c++编译器
  

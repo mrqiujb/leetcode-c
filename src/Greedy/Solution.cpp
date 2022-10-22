@@ -1,44 +1,62 @@
-#include "Solution.hpp"
-
+#include "../../include/Greedy/Solution.hpp"
 //贪心
-bool Solution::isMatch(string s, string p)
+bool Solution::regex (string s,string p,int poss,int posp)
 {
-    if (s == "")
-    {
-        if (p == "" || p == "*")
-            return true;
-        else
+    if(tried.find(pair<int,int>{poss,posp})!=tried.end())//找过了
             return false;
-    }
-    int i = 0, j = 0;
-    while (i < s.length() && j < p.length())
+    
+    tried.insert({poss,posp});
+    while (poss < s.length() && posp < p.length())
     {
-        if (s[i] == p[j])
+        if (s[poss] == p[posp] || p[posp] == '?')
         {
-            i++;
-            j++;
+            poss++;
+            posp++;
             continue;
         }
-        else
+        else if (p[posp] == '*')
         {
-            if (p[j] == '*')
+            while (p[posp] == '*')
             {
-                while (p[++j] == s[i])
-                {
-                    i++;
-                }
+                posp++;
             }
-            else if (p[j] == '?')
+            if (p[posp] == '\0')
+                return true;
+            for (size_t k = poss; k < s.length(); k++)
             {
-                j++;
-                i++;
+                if (p[posp] == s[k]||p[posp]=='?')
+                    if (regex(s,p,k,posp) == true)
+                        return true;
             }
+            return false;
+            continue;
         }
+        return false;
     }
-    if (i == s.length() - 1 && j == p.length() - 1)
+    while (p[posp] == '*')
+    {
+        posp++;
+    }
+    if (poss == s.length() && posp == p.length())
         return true;
     return false;
-}
+};
+bool Solution::isMatch(string s, string p)
+{
+    
+    int m=0;
+    while(p[m]!='\0')
+    {
+        if(p[m]=='*')
+        {
+            int k=m;
+            while(p[++k]=='*');
+            p.erase(m,k-m-1);
+        }
+        m++;
+    }
+    return regex(s,p,0,0);
+};
 vector<int> Solution::inorderTraversalRecursion(TreeNode *root)
 {
     if (root == NULL)

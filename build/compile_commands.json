@@ -1,12 +1,12 @@
 [
 {
   "directory": "/Users/qiujingbao/Documents/leetcode-c/build",
-  "command": "clang++  -I\"/Users/qiujingbao/Documents/leetcode-c/include/**\" -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/main.dir/src/Greedy/Solution.cpp.o -c /Users/qiujingbao/Documents/leetcode-c/src/Greedy/Solution.cpp",
+  "command": "clang++  -I\"/Users/qiujingbao/Documents/leetcode-c/include/**\" -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11 -o CMakeFiles/main.dir/src/Greedy/Solution.cpp.o -c /Users/qiujingbao/Documents/leetcode-c/src/Greedy/Solution.cpp",
   "file": "/Users/qiujingbao/Documents/leetcode-c/src/Greedy/Solution.cpp"
 },
 {
   "directory": "/Users/qiujingbao/Documents/leetcode-c/build",
-  "command": "clang++  -I\"/Users/qiujingbao/Documents/leetcode-c/include/**\" -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/main.dir/src/main.cpp.o -c /Users/qiujingbao/Documents/leetcode-c/src/main.cpp",
+  "command": "clang++  -I\"/Users/qiujingbao/Documents/leetcode-c/include/**\" -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11 -o CMakeFiles/main.dir/src/main.cpp.o -c /Users/qiujingbao/Documents/leetcode-c/src/main.cpp",
   "file": "/Users/qiujingbao/Documents/leetcode-c/src/main.cpp"
 }
 ]
