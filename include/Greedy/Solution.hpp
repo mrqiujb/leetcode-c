@@ -25,7 +25,10 @@ struct TreeNode {
 class Solution {
     public:
     set<pair<int,int>> tried;
+    set<int> jumpset;
     vector<int> inorderRes;
+    bool canJump(vector<int>& nums);
+    bool Jump(vector<int>& nums,int pos);
     bool isMatch(string s, string p);
     vector<int> inorderTraversalRecursion(TreeNode* root);
     int visit_inorder(TreeNode *root);

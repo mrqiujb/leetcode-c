@@ -57,6 +57,50 @@ bool Solution::isMatch(string s, string p)
     }
     return regex(s,p,0,0);
 };
+bool Solution::canJump(vector<int>& nums)
+{
+    if(nums.size()==0) return true;
+    int x=nums.size();x--;
+    while (x>=0 && nums[x]==0)
+    {
+        x--;
+    }
+    int flag=x;
+    for (;x>=0; x--)
+    {
+        if(x+nums[x]>flag&&x+nums[x]<nums.size()-1)
+        {
+            if(jumpset.size()==flag-x)
+            {
+                jumpset.insert(x);
+                continue;
+            }
+            int i=x;
+            for(;i<flag;i++)
+            {
+                if(jumpset.find(x+i)==jumpset.end()) break;
+            }
+            if(i==flag-1) jumpset.insert(x);
+        }
+    }
+    return Jump(nums,0);
+}
+bool Solution::Jump(vector<int>& nums,int pos)
+{
+    if(pos==nums.size()-1) return true;
+    if(nums[pos]==0) return false;  
+    for (size_t i = 1; i <= nums[pos]; i++)
+    {
+        if(jumpset.find(pos+i)!=jumpset.end()) continue;
+        if(Jump(nums,pos+i)==true) return true;
+        jumpset.insert(pos+i);
+    }
+    return false;
+}
+
+
+
+
 vector<int> Solution::inorderTraversalRecursion(TreeNode *root)
 {
     if (root == NULL)
