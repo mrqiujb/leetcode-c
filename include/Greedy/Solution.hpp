@@ -24,16 +24,22 @@ struct TreeNode {
 
 class Solution {
     public:
+    int price;
     set<pair<int,int>> tried;
     set<int> jumpset;
+    set<pair<int,int>> jump_pos_dist;
     vector<int> inorderRes;
+    vector<int> ans;
     bool canJump(vector<int>& nums);
     bool Jump(vector<int>& nums,int pos);
+    int jump(vector<int>& nums);
     bool isMatch(string s, string p);
     vector<int> inorderTraversalRecursion(TreeNode* root);
     int visit_inorder(TreeNode *root);
     vector<int> inorderTraversal(TreeNode* root);
     bool regex(string s,string p,int poss,int posp);
+    int maxProfit(vector<int>& prices);
+    void optionPrice(vector<int> & prices ,int day,int money);
 };
 
 

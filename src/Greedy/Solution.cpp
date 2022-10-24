@@ -41,6 +41,7 @@ bool Solution::regex (string s,string p,int poss,int posp)
         return true;
     return false;
 };
+//正则匹配
 bool Solution::isMatch(string s, string p)
 {
     
@@ -85,6 +86,7 @@ bool Solution::canJump(vector<int>& nums)
     }
     return Jump(nums,0);
 }
+//跳跃游戏
 bool Solution::Jump(vector<int>& nums,int pos)
 {
     if(pos==nums.size()-1) return true;
@@ -97,8 +99,78 @@ bool Solution::Jump(vector<int>& nums,int pos)
     }
     return false;
 }
+//跳跃游戏二
+int Solution::jump(vector<int>& nums)
+{
+    //每次都尽力跳，即跳到最远的距离
+    //应该从倒数第二个元素开始跳
+    //每次都找到能跳到范围内最短的距离 记为该位置最短距离
+    if(nums.size()<=1)
+    {
+        return 0;
+    }
+    else if(nums.size()==2)
+    {
+        return 1;
+    }
+    //nums must above && equal 3
+    //store distance
+    vector<int> distance(nums.size(),0);
+    //init position
+    int pos=nums.size()-2;
+    while (pos>=0)
+    {
+        //if can dircet jump last ele ,then
+        if(nums[pos]+pos>=nums.size()-1)
+        {
+            distance[pos]=1;
+            pos--;
+            continue;
+        }
+        int min=distance[pos+1];
+        //jump range pos+1 pos+nums[pos]
+        //to find min distance elemnet pos
+        for (size_t i = pos+1; i <=pos+nums[pos]; i++)
+        {
+            if(distance[i]<min)
+            {
+                min=distance[i];
+            }
+        }
+        //min distance add one step to insert set
+        distance[pos]=min+1;
+        pos--;
+    }
+    return distance[0];
+}
 
+int jump(vector<int> & nums)
+{
+    int step=0,start=0,end=1;
+    while (end<nums.size())
+    {
+        int maxdis=0;
+        for (int i = start; i < end; i++)
+        {
+           maxdis=max(i+nums[i],maxdis);
+        }
+        start=end;
+        end=maxdis;
+        step++;
+    }
+    return step;
+}
 
+int Solution::maxProfit(vector<int>& prices) {
+    if(prices.size()<=1) return 0;
+    int profit=0;
+    for (size_t i = 1; i < prices.size(); i++)
+    {
+        if(prices[i]-prices[i-1]>0)
+        profit+=prices[i]-prices[i-1];
+    }
+    return profit;
+}
 
 
 vector<int> Solution::inorderTraversalRecursion(TreeNode *root)

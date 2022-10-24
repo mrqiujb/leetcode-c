@@ -7,8 +7,6 @@ using namespace std;
 int main()
 {
         Solution s;
-        vector<int> nums={2,3,1,1,4};
-        s.canJump(nums);
+        vector<int> nums={2,1,4};
+        s.maxProfit(nums);
 }
-
-//"*aa*ba*a*bb*aa*ab*a*aaaaaa*a*aaaa*bbabb*b*b*aaaaaaaaa*a*ba*bbb*a*ba*bb*bb*a*b*bb"
