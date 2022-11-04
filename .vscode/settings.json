@@ -1,6 +1,16 @@
 {
     "files.associations": {
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "__bit_reference": "cpp",
+        "__mutex_base": "cpp",
+        "__split_buffer": "cpp",
+        "__tree": "cpp",
+        "deque": "cpp",
+        "set": "cpp",
+        "stack": "cpp",
+        "tuple": "cpp",
+        "iosfwd": "cpp",
+        "iterator": "cpp"
     }
 }

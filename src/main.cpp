@@ -7,6 +7,5 @@ using namespace std;
 int main()
 {
         Solution s;
-        vector<int> nums={2,1,4};
-        s.maxProfit(nums);
+        s.removeDuplicateLetters("bbcaac");
 }

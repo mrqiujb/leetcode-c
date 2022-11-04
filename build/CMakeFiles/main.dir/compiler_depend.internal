@@ -428,6 +428,8 @@ CMakeFiles/main.dir/src/Greedy/Solution.cpp.o
  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stack
  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/deque
+ /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/math.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/math.h
 
 CMakeFiles/main.dir/src/main.cpp.o
  /Users/qiujingbao/Documents/leetcode-c/src/main.cpp
@@ -856,4 +858,6 @@ CMakeFiles/main.dir/src/main.cpp.o
  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stack
  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/deque
+ /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/math.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/math.h
 

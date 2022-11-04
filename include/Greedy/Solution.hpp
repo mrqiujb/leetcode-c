@@ -10,6 +10,7 @@
 #include <algorithm>
 #include <iostream>
 #include <stack>
+#include <math.h>
 using namespace std;
 
 
@@ -30,6 +31,7 @@ class Solution {
     set<pair<int,int>> jump_pos_dist;
     vector<int> inorderRes;
     vector<int> ans;
+    vector<string> strs;
     bool canJump(vector<int>& nums);
     bool Jump(vector<int>& nums,int pos);
     int jump(vector<int>& nums);
@@ -40,6 +42,16 @@ class Solution {
     bool regex(string s,string p,int poss,int posp);
     int maxProfit(vector<int>& prices);
     void optionPrice(vector<int> & prices ,int day,int money);
+    int canCompleteCircuit(vector<int>& gas, vector<int>& cost);
+    int gonextgas(vector<int> & gas,vector<int> & cost,int now,int oil,int end);
+    int getlength(int num);
+    int compare(int a,int b);
+    void mysort(vector<int>& nums);
+    string largestNumber(vector<int>& nums);
+    string removeDuplicateLetters(string s);
+    string removeDuplicateLetters_force(string s);
+    void deleteLetter(string s,int *letters);
+    bool compareString(string s1,string s2);
 };
 
 
