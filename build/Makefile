@@ -129,6 +129,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/DP/DP.o: src/DP/DP.cpp.o
+.PHONY : src/DP/DP.o
+
+# target to build an object file
+src/DP/DP.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DP/DP.cpp.o
+.PHONY : src/DP/DP.cpp.o
+
+src/DP/DP.i: src/DP/DP.cpp.i
+.PHONY : src/DP/DP.i
+
+# target to preprocess a source file
+src/DP/DP.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DP/DP.cpp.i
+.PHONY : src/DP/DP.cpp.i
+
+src/DP/DP.s: src/DP/DP.cpp.s
+.PHONY : src/DP/DP.s
+
+# target to generate assembly for a file
+src/DP/DP.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DP/DP.cpp.s
+.PHONY : src/DP/DP.cpp.s
+
 src/Greedy/Solution.o: src/Greedy/Solution.cpp.o
 .PHONY : src/Greedy/Solution.o
 
@@ -152,6 +176,30 @@ src/Greedy/Solution.s: src/Greedy/Solution.cpp.s
 src/Greedy/Solution.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Greedy/Solution.cpp.s
 .PHONY : src/Greedy/Solution.cpp.s
+
+src/Tree/Tree.o: src/Tree/Tree.cpp.o
+.PHONY : src/Tree/Tree.o
+
+# target to build an object file
+src/Tree/Tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Tree/Tree.cpp.o
+.PHONY : src/Tree/Tree.cpp.o
+
+src/Tree/Tree.i: src/Tree/Tree.cpp.i
+.PHONY : src/Tree/Tree.i
+
+# target to preprocess a source file
+src/Tree/Tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Tree/Tree.cpp.i
+.PHONY : src/Tree/Tree.cpp.i
+
+src/Tree/Tree.s: src/Tree/Tree.cpp.s
+.PHONY : src/Tree/Tree.s
+
+# target to generate assembly for a file
+src/Tree/Tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Tree/Tree.cpp.s
+.PHONY : src/Tree/Tree.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -186,9 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... src/DP/DP.o"
+	@echo "... src/DP/DP.i"
+	@echo "... src/DP/DP.s"
 	@echo "... src/Greedy/Solution.o"
 	@echo "... src/Greedy/Solution.i"
 	@echo "... src/Greedy/Solution.s"
+	@echo "... src/Tree/Tree.o"
+	@echo "... src/Tree/Tree.i"
+	@echo "... src/Tree/Tree.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

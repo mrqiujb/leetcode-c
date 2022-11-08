@@ -5,6 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/include/Greedy",
+                "${workspaceFolder}/include/DP",
                 "${workspaceFolder}/src/Greedy"
             ],
             "defines": [],

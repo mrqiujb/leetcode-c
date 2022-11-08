@@ -484,3 +484,41 @@ string Solution::removeDuplicateLetters(string s)
     }
     return res;
 }
+
+string Solution::removeKdigits(string num, int k) {
+    stack<int> s;
+    int i=0;
+    while (i<num.length())
+    {
+        while (!s.empty() && k && num[s.top()]>num[i])
+        {
+            s.pop();
+            k--;
+        }
+        s.push(i);
+        i++;
+    }
+    if(k)
+    {
+        while (k)
+        {
+            s.pop();
+            k--;
+        }
+        
+    }
+    string res;
+    res.resize(s.size());
+    for (int j = s.size()-1; j >=0; j--)
+    {
+        res[j]=num[s.top()];
+        s.pop();
+    }
+    if(res=="") return "0";
+    //去掉前导零
+    while (res[0]=='0' && res.length()>1)
+    {
+        res.erase(0,1);
+    }
+    return res;
+}

@@ -52,6 +52,7 @@ class Solution {
     string removeDuplicateLetters_force(string s);
     void deleteLetter(string s,int *letters);
     bool compareString(string s1,string s2);
+    string removeKdigits(string num, int k);
 };
 
 

@@ -1,6 +1,6 @@
-CMakeFiles/main.dir/src/main.cpp.o: \
-  /Users/qiujingbao/Documents/leetcode-c/src/main.cpp \
-  /Users/qiujingbao/Documents/leetcode-c/src/../include/Greedy/Solution.hpp \
+CMakeFiles/main.dir/src/Tree/Tree.cpp.o: \
+  /Users/qiujingbao/Documents/leetcode-c/src/Tree/Tree.cpp \
+  /Users/qiujingbao/Documents/leetcode-c/src/Tree/../../include/Tree/Tree.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/utility \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config_site \
@@ -426,10 +426,4 @@ CMakeFiles/main.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stack \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/math.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/math.h \
-  /Users/qiujingbao/Documents/leetcode-c/src/../include/Tree/Tree.hpp \
-  /Users/qiujingbao/Documents/leetcode-c/src/../include/DP/DP.hpp \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/map \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/unordered_map \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__hash_table \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/cmath
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/math.h
