@@ -29,7 +29,7 @@ class DP {
         int robRecursive(int n,vector<int>& nums);
         int rob2(vector<int>& nums);
         int rob2Range(vector<int> &nums,int start,int end);
-
+        int deleteAndEarn(vector<int>& nums);
 
 };
 

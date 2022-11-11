@@ -6,6 +6,11 @@
 },
 {
   "directory": "/Users/qiujingbao/Documents/leetcode-c/build",
+  "command": "clang++  -I\"/Users/qiujingbao/Documents/leetcode-c/include/**\" -I\"/Users/qiujingbao/Documents/leetcode-c/include/DP/**\" -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11 -o CMakeFiles/main.dir/src/LinkList/LinkList.cpp.o -c /Users/qiujingbao/Documents/leetcode-c/src/LinkList/LinkList.cpp",
+  "file": "/Users/qiujingbao/Documents/leetcode-c/src/LinkList/LinkList.cpp"
+},
+{
+  "directory": "/Users/qiujingbao/Documents/leetcode-c/build",
   "command": "clang++  -I\"/Users/qiujingbao/Documents/leetcode-c/include/**\" -I\"/Users/qiujingbao/Documents/leetcode-c/include/DP/**\" -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11 -o CMakeFiles/main.dir/src/DP/DP.cpp.o -c /Users/qiujingbao/Documents/leetcode-c/src/DP/DP.cpp",
   "file": "/Users/qiujingbao/Documents/leetcode-c/src/DP/DP.cpp"
 },

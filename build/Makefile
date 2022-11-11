@@ -177,6 +177,30 @@ src/Greedy/Solution.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Greedy/Solution.cpp.s
 .PHONY : src/Greedy/Solution.cpp.s
 
+src/LinkList/LinkList.o: src/LinkList/LinkList.cpp.o
+.PHONY : src/LinkList/LinkList.o
+
+# target to build an object file
+src/LinkList/LinkList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/LinkList/LinkList.cpp.o
+.PHONY : src/LinkList/LinkList.cpp.o
+
+src/LinkList/LinkList.i: src/LinkList/LinkList.cpp.i
+.PHONY : src/LinkList/LinkList.i
+
+# target to preprocess a source file
+src/LinkList/LinkList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/LinkList/LinkList.cpp.i
+.PHONY : src/LinkList/LinkList.cpp.i
+
+src/LinkList/LinkList.s: src/LinkList/LinkList.cpp.s
+.PHONY : src/LinkList/LinkList.s
+
+# target to generate assembly for a file
+src/LinkList/LinkList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/LinkList/LinkList.cpp.s
+.PHONY : src/LinkList/LinkList.cpp.s
+
 src/Tree/Tree.o: src/Tree/Tree.cpp.o
 .PHONY : src/Tree/Tree.o
 
@@ -240,6 +264,9 @@ help:
 	@echo "... src/Greedy/Solution.o"
 	@echo "... src/Greedy/Solution.i"
 	@echo "... src/Greedy/Solution.s"
+	@echo "... src/LinkList/LinkList.o"
+	@echo "... src/LinkList/LinkList.i"
+	@echo "... src/LinkList/LinkList.s"
 	@echo "... src/Tree/Tree.o"
 	@echo "... src/Tree/Tree.i"
 	@echo "... src/Tree/Tree.s"

@@ -83,10 +83,24 @@ CMakeFiles/main.dir/src/Greedy/Solution.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Greedy/Solution.cpp.s"
 	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/qiujingbao/Documents/leetcode-c/src/Greedy/Solution.cpp -o CMakeFiles/main.dir/src/Greedy/Solution.cpp.s
 
+CMakeFiles/main.dir/src/LinkList/LinkList.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/LinkList/LinkList.cpp.o: /Users/qiujingbao/Documents/leetcode-c/src/LinkList/LinkList.cpp
+CMakeFiles/main.dir/src/LinkList/LinkList.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qiujingbao/Documents/leetcode-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/LinkList/LinkList.cpp.o"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/LinkList/LinkList.cpp.o -MF CMakeFiles/main.dir/src/LinkList/LinkList.cpp.o.d -o CMakeFiles/main.dir/src/LinkList/LinkList.cpp.o -c /Users/qiujingbao/Documents/leetcode-c/src/LinkList/LinkList.cpp
+
+CMakeFiles/main.dir/src/LinkList/LinkList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/LinkList/LinkList.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/qiujingbao/Documents/leetcode-c/src/LinkList/LinkList.cpp > CMakeFiles/main.dir/src/LinkList/LinkList.cpp.i
+
+CMakeFiles/main.dir/src/LinkList/LinkList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/LinkList/LinkList.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/qiujingbao/Documents/leetcode-c/src/LinkList/LinkList.cpp -o CMakeFiles/main.dir/src/LinkList/LinkList.cpp.s
+
 CMakeFiles/main.dir/src/DP/DP.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/DP/DP.cpp.o: /Users/qiujingbao/Documents/leetcode-c/src/DP/DP.cpp
 CMakeFiles/main.dir/src/DP/DP.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qiujingbao/Documents/leetcode-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/DP/DP.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qiujingbao/Documents/leetcode-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/DP/DP.cpp.o"
 	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/DP/DP.cpp.o -MF CMakeFiles/main.dir/src/DP/DP.cpp.o.d -o CMakeFiles/main.dir/src/DP/DP.cpp.o -c /Users/qiujingbao/Documents/leetcode-c/src/DP/DP.cpp
 
 CMakeFiles/main.dir/src/DP/DP.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/main.dir/src/DP/DP.cpp.s: cmake_force
 CMakeFiles/main.dir/src/Tree/Tree.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Tree/Tree.cpp.o: /Users/qiujingbao/Documents/leetcode-c/src/Tree/Tree.cpp
 CMakeFiles/main.dir/src/Tree/Tree.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qiujingbao/Documents/leetcode-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/Tree/Tree.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qiujingbao/Documents/leetcode-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/Tree/Tree.cpp.o"
 	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/Tree/Tree.cpp.o -MF CMakeFiles/main.dir/src/Tree/Tree.cpp.o.d -o CMakeFiles/main.dir/src/Tree/Tree.cpp.o -c /Users/qiujingbao/Documents/leetcode-c/src/Tree/Tree.cpp
 
 CMakeFiles/main.dir/src/Tree/Tree.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/main.dir/src/Tree/Tree.cpp.s: cmake_force
 CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.cpp.o: /Users/qiujingbao/Documents/leetcode-c/src/main.cpp
 CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qiujingbao/Documents/leetcode-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qiujingbao/Documents/leetcode-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/main.cpp.o"
 	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/main.cpp.o -MF CMakeFiles/main.dir/src/main.cpp.o.d -o CMakeFiles/main.dir/src/main.cpp.o -c /Users/qiujingbao/Documents/leetcode-c/src/main.cpp
 
 CMakeFiles/main.dir/src/main.cpp.i: cmake_force
@@ -128,6 +142,7 @@ CMakeFiles/main.dir/src/main.cpp.s: cmake_force
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/src/Greedy/Solution.cpp.o" \
+"CMakeFiles/main.dir/src/LinkList/LinkList.cpp.o" \
 "CMakeFiles/main.dir/src/DP/DP.cpp.o" \
 "CMakeFiles/main.dir/src/Tree/Tree.cpp.o" \
 "CMakeFiles/main.dir/src/main.cpp.o"
@@ -136,12 +151,13 @@ main_OBJECTS = \
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/src/Greedy/Solution.cpp.o
+main: CMakeFiles/main.dir/src/LinkList/LinkList.cpp.o
 main: CMakeFiles/main.dir/src/DP/DP.cpp.o
 main: CMakeFiles/main.dir/src/Tree/Tree.cpp.o
 main: CMakeFiles/main.dir/src/main.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/qiujingbao/Documents/leetcode-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/qiujingbao/Documents/leetcode-c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -6,6 +6,8 @@ set(CMAKE_CXX_COMPILER "clang++")#设置c++编译器
 include_directories(${PROJECT_SOURCE_DIR}/include/**)#添加头文件的搜索路径
 include_directories(${PROJECT_SOURCE_DIR}/include/DP/**)
 aux_source_directory(./src/Greedy SrcFiles)#将源文件列表写在变量SrcFiles中
+
+aux_source_directory(./src/LinkList SrcFiles)
 aux_source_directory(./src/DP SrcFiles)#将源文件列表写在变量SrcFiles中
 aux_source_directory(./src/Tree SrcFiles)#将源文件列表写在变量SrcFiles中
 aux_source_directory(./src SrcFiles)#工程项目较大，要创建多个模块
