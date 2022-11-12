@@ -26,6 +26,9 @@ class LinkList
     ListNode* removeNthFromEnd(ListNode* head, int n);
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2);
     ListNode* swapPairs(ListNode* head);
+    ListNode* Reverse(ListNode * head,int n);
+    ListNode* reverseKGroup(ListNode* head, int k);
+    ListNode* rotateRight(ListNode *head, int k);
 };
 
 #endif

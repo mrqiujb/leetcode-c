@@ -18,10 +18,11 @@ int main()
         ListNode l;
         a.val=1;a.next=&b;
         b.val=2;b.next=&c;
-        a.val=1;a.next=&b;
-        a.val=1;a.next=&b;
-        a.val=1;a.next=&b;
-        a.val=1;a.next=&b;
+        c.val=3;c.next=&d;
+        d.val=4;d.next=&e;
+        e.val=5;e.next=&f;
+        f.val=6;f.next=NULL;
 
-        l.removeNthFromEnd();
+        LinkList solution;
+        ListNode *tem= solution.reverseKGroup(&a,2);
 }
