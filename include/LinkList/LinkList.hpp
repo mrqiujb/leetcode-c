@@ -11,6 +11,8 @@
 #include <iostream>
 #include <stack>
 #include <math.h>
+#include <unordered_map>
+
 using namespace std;
 struct ListNode
 {
@@ -23,12 +25,17 @@ struct ListNode
 class LinkList
 {
     public:
+    
     ListNode* removeNthFromEnd(ListNode* head, int n);
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2);
     ListNode* swapPairs(ListNode* head);
     ListNode* Reverse(ListNode * head,int n);
     ListNode* reverseKGroup(ListNode* head, int k);
     ListNode* rotateRight(ListNode *head, int k);
-};
+    ListNode* deleteDuplicates(ListNode* head);
+    ListNode* deleteDuplicates2(ListNode* head);
+    ListNode *partition(ListNode *head, int x);
+    ListNode *reverseBetween(ListNode *head, int left, int right);
+};  
 
 #endif

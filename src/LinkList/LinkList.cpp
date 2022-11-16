@@ -199,3 +199,143 @@ ListNode *LinkList::rotateRight(ListNode *head, int k)
     p->next = NULL;
     return ans;
 }
+
+// attion the list is sorted
+ListNode *LinkList::deleteDuplicates(ListNode *head)
+{
+    if (head == NULL)
+        return NULL;
+    ListNode *p = head;
+    while (p != NULL && p->next != NULL)
+    {
+        ListNode *pn = p->next;
+        if (pn->val == p->val)
+        {
+            p->next = pn->next;
+            pn = p->next;
+            continue;
+        }
+        p = p->next;
+    }
+    return head;
+}
+
+ListNode *LinkList::deleteDuplicates2(ListNode *head)
+{
+    if (head == NULL || head->next == NULL)
+        return head;
+    ListNode *p = head->next;
+    ListNode *pre = head;
+    ListNode *ans = head;
+    //找到第一个不重复元素给ans
+    while (p != NULL && pre != NULL && p->val == pre->val)
+    {
+        while (p != NULL && p->val == pre->val)
+        {
+            p = p->next;
+        }
+        ans = p;
+        if (p != NULL)
+        {
+            pre = p;
+            p = p->next;
+        }
+        else
+            return ans;
+    }
+    while (p != NULL && p->next != NULL)
+    {
+        if (p->val == p->next->val)
+        {
+            ListNode *tem = p->next;
+            while (tem != NULL && p->val == tem->val)
+            {
+                tem = tem->next;
+            }
+            pre->next = tem;
+            p = tem;
+
+            continue;
+        }
+        pre = p;
+        p = p->next;
+    }
+    return ans;
+}
+
+ListNode *LinkList::partition(ListNode *head, int x)
+{
+    //先找到第一个大于x的的结点及其pre
+    if (head == NULL && head->next == NULL)
+        return NULL;
+    ListNode *pre = head, *p = head->next;
+    while (p != NULL && p->val < x)
+    {
+        pre = pre->next;
+        p = p->next;
+    }
+    ListNode *list1 = pre;
+    ListNode *list2 = p;
+    pre = list2;
+    p = pre->next;
+    while (p != NULL)
+    {
+        if (p->val < x)
+        {
+            pre->next = p->next;
+            list1->next = p;
+            p->next = NULL;
+            p = pre->next;
+        }
+    }
+    list1->next = list2;
+    return head;
+}
+
+ListNode *LinkList::reverseBetween(ListNode *head, int left, int right)
+{
+    //假定left<=right<=size
+    if (left == right || head == NULL)
+        return head;
+    if (left == 1)
+    {
+        ListNode *pre = head, *p = head->next;
+        int i = 0;
+        ListNode *tem = NULL;
+        while (p != NULL && i < (right - left))
+        {
+            tem = p->next;
+            p->next = pre;
+            pre = p;
+            p = tem;
+            i++;
+        }
+        head->next = p;
+        return pre;
+    }
+    else
+    {
+        int i = 1;
+        ListNode *p = head;
+        while (i < (left - 1))
+        {
+            p = p->next;
+            i++;
+        }
+        ListNode *leftp = p->next;
+        ListNode *p1 = p->next->next, *p1pre = p->next;
+        i = 0;
+        ListNode *tem = NULL;
+        while (p1 != NULL && i < (right - left))
+        {
+            tem = p1->next;
+            p1->next = p1pre;
+            p1pre = p1;
+            p1 = tem;
+            i++;
+        }
+        leftp->next = tem;
+        p->next = p1pre;
+        return head;
+    }
+}
